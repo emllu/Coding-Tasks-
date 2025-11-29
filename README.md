@@ -1,5 +1,8 @@
 Documentation for Coding Tasks 
+
 1 Task Overview
+
+
 Task 1: (Smart Text Analyzer)
 Build a function that analyzes a text input and returns:
 -Total word count
@@ -8,6 +11,7 @@ Build a function that analyzes a text input and returns:
 -Word frequency (case-insensitive)
 
 Language chosen: Python
+
 
 2.Research and Resources 
 
@@ -20,9 +24,12 @@ Python re module: https://docs.python.org/3/library/re.html
 Python collections.defaultdict: https://docs.python.org/3/library/collections.html#collections.defaultdict
  
 3.thought process
+
 Task 1
  approach chose: i used python programming language with re splititng words and defaultdict for frequency counting 
  Reason : instead of using split() and other builtin function might make works less simple but i used library to make the code robust,handles the puntuation and easier to maintain.
+ 
+ 
 4.Solution Process
 Task 1 
 Input Handling: Read multi-line text input from user. Used strip() to check for empty input.
@@ -43,7 +50,9 @@ Calculations:
 -Challenges faced: Handling punctuation and duplicates. Solved using re.findall and dict.fromkeys().
 
 5 Why This Solution is Optimal
+
 Task 1
+
 Handles punctuation and multiple spaces robustly.
 
 Correctly computes all requested metrics (count, average, longest words, frequency).
