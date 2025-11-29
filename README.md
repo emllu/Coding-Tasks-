@@ -1,16 +1,11 @@
 Documentation for Coding Tasks 
 1 Task Overview
 Task 1: (Smart Text Analyzer)
-
 Build a function that analyzes a text input and returns:
-
-Total word count
-
-Average word length (2 decimals)
-
-Longest word(s)
-
-Word frequency (case-insensitive)
+-Total word count
+-Average word length (2 decimals)
+-Longest word(s)
+-Word frequency (case-insensitive)
 
 Language chosen: Python
 
@@ -29,9 +24,7 @@ Task 1
  approach chose: i used python programming language with re splititng words and defaultdict for frequency counting 
  Reason : instead of using split() and other builtin function might make works less simple but i used library to make the code robust,handles the puntuation and easier to maintain.
 4.Solution Process
-task 1 
-Task 1
-
+Task 1 
 Input Handling: Read multi-line text input from user. Used strip() to check for empty input.
 
 Word Splitting: Used re.findall(r'\b\w+\b', text.lower()) to extract words ignoring punctuation.
@@ -40,18 +33,17 @@ Output: Returned dictionary with required fields and printed nicely for user.
 
 Calculations:
 
-Word count → counted unique words to avoid duplicates.
+-Word count → counted unique words to avoid duplicates.
 
-Average word length → sum of word lengths divided by total words, rounded to 2 decimals.
+-Average word length → sum of word lengths divided by total words, rounded to 2 decimals.
 
-Longest word(s) → identified max length and collected all words of that length.
-Word frequency → incremented counts in defaultdict.
+-Longest word(s) → identified max length and collected all words of that length.
+-Word frequency → incremented counts in defaultdict.
 
-Challenges faced: Handling punctuation and duplicates. Solved using re.findall and dict.fromkeys().
+-Challenges faced: Handling punctuation and duplicates. Solved using re.findall and dict.fromkeys().
 
 5 Why This Solution is Optimal
 Task 1
-
 Handles punctuation and multiple spaces robustly.
 
 Correctly computes all requested metrics (count, average, longest words, frequency).
