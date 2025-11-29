@@ -36,6 +36,8 @@ Input Handling: Read multi-line text input from user. Used strip() to check for 
 
 Word Splitting: Used re.findall(r'\b\w+\b', text.lower()) to extract words ignoring punctuation.
 
+Output: Returned dictionary with required fields and printed nicely for user.
+
 Calculations:
 
 Word count → counted unique words to avoid duplicates.
@@ -43,6 +45,7 @@ Word count → counted unique words to avoid duplicates.
 Average word length → sum of word lengths divided by total words, rounded to 2 decimals.
 
 Longest word(s) → identified max length and collected all words of that length.
+Word frequency → incremented counts in defaultdict.
 
 Challenges faced: Handling punctuation and duplicates. Solved using re.findall and dict.fromkeys().
 

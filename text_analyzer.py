@@ -40,3 +40,40 @@ def analyze_text (text):
     # removed duplicates
     longest_words=list(dict.fromkeys(longest_words))
     # calculate word frequency
+    word_freq = defaultdict(int)
+    for word in words:
+        word_freq[word] += 1
+    
+    return {
+        "word_count": word_count,
+        "average_word_length": average_length,
+        "longest_words": longest_words,
+        "word_frequency": dict(word_freq)
+    }
+
+if __name__ == "__main__":
+    print("Text Analyzer")
+    print("Enter your text (press Enter twice to finish):")
+    
+    # Read multiple lines of input until an empty line is entered
+    lines = []
+    while True:
+        line = input()
+        if line == "":
+            break
+        lines.append(line)
+    
+    # Join all lines with spaces
+    user_text = " ".join(lines)
+    
+    if not user_text.strip():
+        print("No text provided!")
+    else:
+        result = analyze_text(user_text)
+        print("\nText Analysis Result:")
+        print(f"Word count: {result['word_count']}")
+        print(f"Average word length: {result['average_word_length']}")
+        print(f"Longest word(s): {', '.join(result['longest_words'])}")
+        print("Word frequencies:")
+        for word, freq in sorted(result['word_frequency'].items()):
+            print(f"  {word}: {freq}")
