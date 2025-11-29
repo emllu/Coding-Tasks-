@@ -4,6 +4,7 @@ Documentation for Coding Tasks
 
 
 Task 1: (Smart Text Analyzer)
+
 Build a function that analyzes a text input and returns:
 
 
@@ -40,37 +41,55 @@ Language chosen: JavaScript
 
 
 Stackoverflow:
+
 https://stackoverflow.com/questions/18679576/find-longest-word-in-text
 
 Official documentation visited:
+
 Python re module: https://docs.python.org/3/library/re.html
+
 
 Python collections.defaultdict: https://docs.python.org/3/library/collections.html#collections.defaultdict
 
+
 JavaScript Promise and async/await: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+
  
 3.thought process
 
 
 Task 1
  approach chose: i used python programming language with re splititng words and defaultdict for frequency counting 
+
+ 
  Reason : instead of using split() and other builtin function might make works less simple but i used library to make the code robust,handles the puntuation and easier to maintain.
 
+
+ Task 2
+
+Approach chosen: JavaScript async function with try/catch and while loop for retries.
+
+Reason: async/await provides clean syntax for asynchronous code. Using setTimeout wrapped in a Promise allows delay between retries.
+
+
 4.Solution Process
+
 Task 1 
-Input Handling: Read multi-line text input from user. Used strip() to check for empty input.
 
-Word Splitting: Used re.findall(r'\b\w+\b', text.lower()) to extract words ignoring punctuation.
+-Input Handling: Read multi-line text input from user. Used strip() to check for empty input.
 
-Output: Returned dictionary with required fields and printed nicely for user.
+-Word Splitting: Used re.findall(r'\b\w+\b', text.lower()) to extract words ignoring punctuation.
 
-Calculations:
+-Output: Returned dictionary with required fields and printed nicely for user.
+
+-Calculations:
 
 -Word count → counted unique words to avoid duplicates.
 
 -Average word length → sum of word lengths divided by total words, rounded to 2 decimals.
 
 -Longest word(s) → identified max length and collected all words of that length.
+
 -Word frequency → incremented counts in defaultdict.
 
 -Challenges faced: Handling punctuation and duplicates. Solved using re.findall and dict.fromkeys().
